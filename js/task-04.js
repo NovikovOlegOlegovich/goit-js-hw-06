@@ -7,11 +7,11 @@ const decrementEl = document.querySelector('[data-action="decrement"]');
 const incrementEl = document.querySelector('[data-action="increment"]');
 
 const decremen = () => {
-  counter = --counter.textContent;
+  counter.textContent = --counterValue;
 };
 
 const increment = () => {
-  counter = ++counter.textContent;
+  counter.textContent = ++counterValue;
 };
 
 decrementEl.addEventListener("click", decremen);

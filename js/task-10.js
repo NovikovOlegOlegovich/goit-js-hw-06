@@ -5,10 +5,12 @@ function getRandomHexColor() {
 }
 
 function createBoxes(amount) {
+  let width = 20;
+  let height = 20;
   for (let i = 0; i < amount; i += 1) {
     let divEl = document.createElement("div");
-    divEl.style.width = 10 * (i + 1) + "px";
-    divEl.style.height = 10 * (i + 1) + "px";
+    divEl.style.width = (width += 10) + "px";
+    divEl.style.height = (height += 10) + "px";
     divEl.style.backgroundColor = getRandomHexColor();
     divBoxEl.append(divEl);
   }

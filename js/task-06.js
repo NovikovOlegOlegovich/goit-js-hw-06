@@ -1,15 +1,15 @@
 const inputEl = document.querySelector("input#validation-input");
 
-inputEl.addEventListener("blur", () => {
-  if (inputEl.value.length <= inputEl.getAttribute("data-length")) {
-    inputEl.classList.add("valid");
-    if (inputEl.classList.contains("invalid")) {
+inputEl.addEventListener("blur", inputBlur);
+
+
+function inputBlur(event) {
+    if (Number(inputEl.dataset.length) === event.currentTarget.value.length) {
+      inputEl.classList.add("valid");
       inputEl.classList.remove("invalid");
-    }
-  } else {
-    inputEl.classList.add("invalid");
-    if (inputEl.classList.contains("valid")) {
+    } else {
+      inputEl.classList.add("invalid");
       inputEl.classList.remove("valid");
     }
   }
-});
+

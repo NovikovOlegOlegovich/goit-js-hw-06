@@ -10,7 +10,7 @@ formEl.addEventListener("submit", (event) => {
   if (email.value === "" || password.value === "") {
     return alert("Всі поля повинні бути заповнені ");
   } else {
-    let user = {
+    const user = {
       email: email.value,
       password: password.value,
     };
